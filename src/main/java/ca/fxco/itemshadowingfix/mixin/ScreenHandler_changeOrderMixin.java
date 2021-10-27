@@ -45,7 +45,8 @@ public class ScreenHandler_changeOrderMixin {
                     target="Lnet/minecraft/screen/slot/Slot;setStack(Lnet/minecraft/item/ItemStack;)V",
                     ordinal = 2,
                     shift = At.Shift.AFTER
-            )
+            ),
+            require = 0
     )
     private void RunAfterInventoryUpdate(int slotIndex, int button, SlotActionType actionType, PlayerEntity player, CallbackInfo ci) {
         player.getInventory().setStack(button, ItemStack.EMPTY);
@@ -67,7 +68,8 @@ public class ScreenHandler_changeOrderMixin {
                     value="INVOKE",
                     target="Lnet/minecraft/item/ItemStack;split(I;)Lnet/minecraft/item/ItemStack;",
                     ordinal = 1
-            )
+            ),
+            require = 0
     )
     private ItemStack dontDoSplit(ItemStack self, int amt) {
         return self;
