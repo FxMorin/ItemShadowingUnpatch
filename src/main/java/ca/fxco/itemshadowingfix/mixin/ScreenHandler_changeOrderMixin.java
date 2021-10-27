@@ -52,27 +52,4 @@ public class ScreenHandler_changeOrderMixin {
     private void RunAfterInventoryUpdate(int slotIndex, int button, SlotActionType actionType, PlayerEntity player, CallbackInfo ci) {
         player.getInventory().setStack(button, ItemStack.EMPTY);
     }
-
-    /* =====================================================
-               If mojang uses a split like carpet-fixes
-       ===================================================== */
-
-    @Redirect(
-            method= "internalOnSlotClick(IILnet/minecraft/screen/slot/SlotActionType;Lnet/minecraft/entity/player/PlayerEntity;)V",
-            slice=@Slice(
-                    from=@At(
-                            value="FIELD",
-                            target="Lnet/minecraft/screen/slot/SlotActionType;SWAP:Lnet/minecraft/screen/slot/SlotActionType;"
-                    )
-            ),
-            at=@At(
-                    value="INVOKE",
-                    target="Lnet/minecraft/item/ItemStack;split(I)Lnet/minecraft/item/ItemStack;",
-                    ordinal = 1
-            ),
-            require = 0
-    )
-    private ItemStack dontDoSplit(ItemStack self, int amt) {
-        return self;
-    }
 }
