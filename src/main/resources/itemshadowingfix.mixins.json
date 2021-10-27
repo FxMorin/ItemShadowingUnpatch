@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ca.fxco.itemshadowingfix.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "ScreenHandler_changeOrderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
