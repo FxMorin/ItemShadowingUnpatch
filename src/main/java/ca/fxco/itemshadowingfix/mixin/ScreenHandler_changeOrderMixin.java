@@ -66,7 +66,7 @@ public class ScreenHandler_changeOrderMixin {
             ),
             at=@At(
                     value="INVOKE",
-                    target="Lnet/minecraft/item/ItemStack;split(I;)Lnet/minecraft/item/ItemStack;",
+                    target="Lnet/minecraft/item/ItemStack;split(I)Lnet/minecraft/item/ItemStack;",
                     ordinal = 1
             ),
             require = 0
