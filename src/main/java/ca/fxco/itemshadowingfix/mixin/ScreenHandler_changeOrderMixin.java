@@ -33,6 +33,7 @@ public class ScreenHandler_changeOrderMixin {
     )
     private void dontRunBeforeInventoryUpdate(PlayerInventory instance, int slot, ItemStack stack) {}
 
+
     @Inject(
             method= "internalOnSlotClick(IILnet/minecraft/screen/slot/SlotActionType;Lnet/minecraft/entity/player/PlayerEntity;)V",
             slice=@Slice(
