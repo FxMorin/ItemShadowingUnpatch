@@ -28,7 +28,8 @@ public class ScreenHandler_changeOrderMixin {
                     value="INVOKE",
                     target="Lnet/minecraft/entity/player/PlayerInventory;setStack(ILnet/minecraft/item/ItemStack;)V",
                     ordinal = 1
-            )
+            ),
+            require = 0
     )
     private void dontRunBeforeInventoryUpdate(PlayerInventory instance, int slot, ItemStack stack) {}
 
