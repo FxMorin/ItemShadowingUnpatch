@@ -1,4 +1,4 @@
-# itemshadowingfix
+# ItemShadowingFix
 
 This will be moved to carpet-fixes once 1.18 is out xD
 
